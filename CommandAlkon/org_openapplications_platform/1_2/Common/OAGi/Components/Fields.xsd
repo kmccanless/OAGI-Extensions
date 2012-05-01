@@ -1,0 +1,4 @@
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Keith McCanless (Command Alkon) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:cai="http://www.commandalkon.com/oagis/9" targetNamespace="http://www.commandalkon.com/oagis/9" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../../../OAGi-BPI-Platform/org_openapplications_platform/1_2/Common/OAGi/Components/Fields.xsd"/>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Keith McCanless (Command Alkon) -->
+<xs:schema xmlns:cai="http://www.commandalkon.com/oagis/9" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.commandalkon.com/oagis/9" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../../OAGi-BPI-Platform/org_openapplications_platform/1_2/Common/OAGi/Components/Meta.xsd"/>
+	<xs:include schemaLocation="../Nouns/ProductionCapability.xsd"/>
+	<xs:complexType name="SyncProductionCapabilityInformationDataAreaType">
+		<xs:sequence>
+			<xs:element ref="oa:Sync"/>
+			<xs:element ref="cai:ProductionCapability" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SyncProductionCapabilityInformation" type="cai:SyncProductionCapabilityInformationType"/>
+	<xs:complexType name="SyncProductionCapabilityInformationType">
+		<xs:complexContent>
+			<xs:extension base="oa:BusinessObjectDocumentType">
+				<xs:sequence>
+					<xs:element name="DataArea">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="cai:SyncProductionCapabilityInformationDataAreaType"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

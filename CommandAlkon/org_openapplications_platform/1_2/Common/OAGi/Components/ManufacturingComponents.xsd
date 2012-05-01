@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Keith McCanless (Command Alkon) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:cai="http://www.commandalkon.com/oagis/9" targetNamespace="http://www.commandalkon.com/oagis/9" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../../../OAGi-BPI-Platform/org_openapplications_platform/1_2/Common/OAGi/Components/ManufacturingComponents.xsd"/>
+	<xs:include schemaLocation="Components.xsd"/>
+	<xs:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../../../OAGi-BPI-Platform/org_openapplications_platform/1_2/Common/OAGi/Components/Fields.xsd"/>
+	<xs:complexType name="ProcessSegmentCapabilityType">
+		<xs:sequence>
+			<xs:element ref="oa:ID"/>
+			<xs:element ref="oa:Description"/>
+			<xs:element ref="cai:ProcessSegment"/>
+			<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+			<xs:element ref="oa:Reason"/>
+			<xs:element name="Location" type="cai:LocationType"/>
+			<xs:element ref="oa:StartDateTime"/>
+			<xs:element ref="oa:EndDateTime"/>
+			<xs:element name="SegmentPersonnelCapability">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cai:PersonnelSegmentType">
+							<xs:sequence>
+								<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+								<xs:element ref="oa:Reason"/>
+								<xs:element name="Location" type="cai:LocationType"/>
+								<xs:element ref="oa:StartDateTime"/>
+								<xs:element ref="oa:EndDateTime"/>
+								<xs:element ref="oa:Quantity"/>
+								<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+								<xs:element ref="oa:UserArea"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SegmentEquipmentCapability">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cai:EquipmentSegmentType">
+							<xs:sequence>
+								<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+								<xs:element ref="oa:Reason"/>
+								<xs:element name="Location" type="cai:LocationType"/>
+								<xs:element ref="oa:StartDateTime"/>
+								<xs:element ref="oa:EndDateTime"/>
+								<xs:element ref="oa:Quantity"/>
+								<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+								<xs:element ref="oa:UserArea"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SegmentMaterialCapability">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cai:MaterialSegmentType">
+							<xs:sequence>
+								<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+								<xs:element ref="oa:Reason"/>
+								<xs:element name="Location" type="cai:LocationType"/>
+								<xs:element ref="oa:StartDateTime"/>
+								<xs:element ref="oa:EndDateTime"/>
+								<xs:element ref="oa:Quantity"/>
+								<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+								<xs:element ref="oa:UserArea"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CapabilityTypeType">
+		<xs:simpleContent>
+			<xs:restriction base="oa:CodeType">
+				<xs:enumeration value="Available"/>
+				<xs:enumeration value="Unattainable"/>
+				<xs:enumeration value="Committed"/>
+				<xs:enumeration value="Other"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PersonnelCapabilityType">
+		<xs:sequence>
+			<xs:element ref="cai:Person"/>
+			<xs:element ref="cai:PersonnelClass"/>
+			<xs:element ref="oa:Description"/>
+			<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+			<xs:element ref="oa:Reason"/>
+			<xs:element name="Location" type="cai:LocationType"/>
+			<xs:element ref="oa:StartDateTime"/>
+			<xs:element ref="oa:EndDateTime"/>
+			<xs:element ref="oa:Quantity"/>
+			<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+			<xs:element ref="oa:UserArea"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MaterialCapabilityType">
+		<xs:sequence>
+			<xs:element ref="cai:MaterialClass"/>
+			<xs:element ref="cai:MaterialDefinition"/>
+			<xs:element ref="cai:MaterialLot"/>
+			<xs:element ref="cai:MaterialSublot"/>
+			<xs:element ref="oa:Description"/>
+			<xs:element name="Location" type="cai:LocationType"/>
+			<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+			<xs:element ref="oa:Reason"/>
+			<xs:element ref="oa:MaterialUseCode"/>
+			<xs:element ref="oa:StartDateTime"/>
+			<xs:element ref="oa:EndDateTime"/>
+			<xs:element ref="oa:Quantity"/>
+			<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+			<xs:element ref="oa:UserArea"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquipmentCapabilityType">
+		<xs:sequence>
+			<xs:element ref="cai:Equipment"/>
+			<xs:element ref="cai:EquipmentClass"/>
+			<xs:element ref="oa:Description"/>
+			<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+			<xs:element ref="oa:Reason"/>
+			<xs:element name="Location" type="cai:LocationType"/>
+			<xs:element ref="oa:StartDateTime"/>
+			<xs:element ref="oa:EndDateTime"/>
+			<xs:element ref="oa:Quantity"/>
+			<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+			<xs:element ref="oa:UserArea"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EquipmentCapabilityType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="cai:Equipment"/>
+				<xs:element ref="cai:EquipmentClass"/>
+				<xs:element ref="oa:Description"/>
+				<xs:element name="CapabilityType" type="cai:CapabilityTypeType"/>
+				<xs:element ref="oa:Reason"/>
+				<xs:element name="Location" type="cai:LocationType"/>
+				<xs:element ref="oa:StartDateTime"/>
+				<xs:element ref="oa:EndDateTime"/>
+				<xs:element ref="oa:Quantity"/>
+				<xs:element name="QuantityUOM" type="cai:UnitOfMeasureType"/>
+				<xs:element ref="oa:UserArea"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
