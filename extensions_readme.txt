@@ -1,6 +1,7 @@
 To set up environment.
 
-Download and extract 9.5 Full
+Download and extract 9.5 Full OR Download the OAGi-BPI-Platform folder from Github
+
 Download the CommandAlkon folder from Git hub
 Place the CommandAlkon folder as a sibling of OAGI-BPI-Platform
 
