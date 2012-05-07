@@ -16,8 +16,8 @@
 			<xs:element name="PersonnelCapability" type="cai:PersonnelCapabilityType"/>
 			<xs:element name="EquipmentCapability" type="cai:EquipmentCapabilityType"/>
 			<xs:element name="MaterialCapability" type="cai:MaterialCapabilityType" minOccurs="0"/>
-			<xs:element ref="oa:UserArea" minOccurs="0"/>
 			<xs:element name="ProcessSegmentCapability" type="cai:ProcessSegmentCapabilityType"/>
+			<xs:element ref="oa:UserArea" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
