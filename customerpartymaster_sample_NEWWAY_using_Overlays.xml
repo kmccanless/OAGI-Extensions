@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cai:CustomerPartyMaster xmlns="http://www.openapplications.org/oagis/9" xmlns:cai="http://www.commandalkon.com/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.commandalkon.com/oagis/9 .\CommandAlkon\org_openapplications_oagis\9_5\Developer\Nouns\CustomerPartyMaster.xsd"> 
+   <PartyIDs>
+      <ID>normalizedString(GUID)</ID>
+	  <TaxID>normalizedString(Customer Tax ID)</TaxID>
+	  <TaxID>normalizedString(Customer Tax ID (2))</TaxID>
+   </PartyIDs>
+   <AccountID>normalizedString(Customer Code)</AccountID>
+   <Name sequence="1">string(Customer Name)</Name>
+   <Name sequence="2">string(Customer Sort Name)</Name>
+   <cai:Location type="Primary">
+      <Address>
+         <AttentionOfName>string(Address)</AttentionOfName>
+         <AddressLine sequence="1">string(Address Line 1)</AddressLine>
+         <AddressLine sequence="2">string(Address Line 2)</AddressLine>
+         <AddressLine sequence="3">string(Address Line 3)</AddressLine>
+         <CityName>string(City)</CityName>
+         <CountrySubDivisionCode>normalizedString(State)</CountrySubDivisionCode>
+         <CountryCode>normalizedString(Country)</CountryCode>
+         <PostalCode>normalizedString(Postal Code)</PostalCode>
+      </Address>
+      <cai:OrderType>string(User Order Type)</cai:OrderType>
+   </cai:Location>
+   <cai:Location type="Aggregate">
+	   <cai:OrderType>01</cai:OrderType>
+   </cai:Location>
+   <cai:Location type="Concrete">
+	   <cai:OrderType>TH</cai:OrderType>
+   </cai:Location>
+   <Contact>
+      <Name>string(Customer Contact Name)</Name>
+      <Communication sequence="1">
+		 <ChannelCode>Telephone</ChannelCode>
+         <DialNumber>string(Phone Number 1)</DialNumber>
+      </Communication>
+      <Communication sequence="2">
+		 <ChannelCode>Telephone</ChannelCode>
+         <DialNumber>string(Phone Number 2)</DialNumber>
+      </Communication>
+      <Communication sequence="3">
+		 <ChannelCode>Telephone</ChannelCode>
+         <DialNumber>string(Phone Number 3)</DialNumber>
+      </Communication>
+      <Communication sequence="4">
+		 <ChannelCode>Telephone</ChannelCode>
+         <DialNumber>string(Phone Number 4)</DialNumber>
+      </Communication>
+   </Contact>
+   <BuyerContact>
+      <ID>normalizedString(Billing Customer Code)</ID>
+      <Name>string(Customer Invoice Name)</Name>
+	  <Address>
+         <AttentionOfName>string()</AttentionOfName>
+         <AddressLine sequence="1">string(Customer Invoice Address Line 1)</AddressLine>
+         <AddressLine sequence="2">string(Customer Invoice Address Line 2)</AddressLine>
+         <AddressLine sequence="3">string(Customer Invoice Address Line 3)</AddressLine>
+         <CityName>string(Customer Invoice City)</CityName>
+         <CountrySubDivisionCode>normalizedString(Customer Invoice State)</CountrySubDivisionCode>
+         <CountryCode>normalizedString(Customer Invoice Country)</CountryCode>
+         <PostalCode>normalizedString(Customer Invoice Postal Code)</PostalCode>
+	  </Address>
+   </BuyerContact>
+   <cai:TaxCode>(Tax Code)</cai:TaxCode>
+   <cai:TaxableCode>(Taxable Flag)</cai:TaxableCode>
+   <cai:NonTaxReason>(Non Taxable Reason Code)</cai:NonTaxReason>
+   <cai:PORequiredFlag>(Purchase Order required flag)</cai:PORequiredFlag>
+   <cai:JobNumberRequiredFlag>(Job Number Required flag)</cai:JobNumberRequiredFlag>
+   <cai:AccountCategory>(Customer Accounting Category)</cai:AccountCategory>
+   <cai:EditOrderTypeCode>(Edit Order Type Flag)</cai:EditOrderTypeCode>
+   <cai:ThirdPartyFlag>(Third Party customer flag)</cai:ThirdPartyFlag>
+   <cai:UseFrameProjectProductFlag>(Allow Frame Project product flag)</cai:UseFrameProjectProductFlag>
+   <cai:FiscalRegistration>(Fiscal Registration Code)</cai:FiscalRegistration>
+   <cai:RestrictProjectCreationFlag>(Restrict Project Creation flag)</cai:RestrictProjectCreationFlag>
+</cai:CustomerPartyMaster>

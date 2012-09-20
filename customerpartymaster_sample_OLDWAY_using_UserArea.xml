@@ -1,0 +1,72 @@
+<CustomerPartyMaster>
+   <PartyIDs>
+      <ID>normalizedString(GUID)</ID>
+	  <TaxID>normalizedString(Customer Tax ID)</TaxID>
+	  <TaxID>normalizedString(Customer Tax ID (2))</TaxID>
+   </PartyIDs>
+   <AccountID>normalizedString(Customer Code)</AccountID>
+   <Name>string(Customer Name)</Name>
+   <Name>string(Customer Sort Name)</Name>
+   <Location>
+      <Address>
+         <AttentionOfName>string(Address)</AttentionOfName>
+         <AddressLine>string(Address Line 1)</AddressLine>
+         <AddressLine>string(Address Line 2)</AddressLine>
+         <AddressLine>string(Address Line 3)</AddressLine>
+         <CityName>string(City)</CityName>
+         <CountrySubDivisionCode>normalizedString(State)</CountrySubDivisionCode>
+         <CountryCode>normalizedString(Country)</CountryCode>
+         <PostalCode>normalizedString(Postal Code)</PostalCode>
+      </Address>
+	  <UserArea>
+		 <cai:LocationExtend>	
+		    <cai:OrderType type="Aggregate"></cai:OrderType>
+			<cai:OrderType type="Concrete"></cai:OrderType>
+		 </cai:LocationExtend>
+   </UserArea>
+   </Location>
+   <Contact>
+      <Name>string(Customer Contact Name)</Name>
+      <Communication>
+         <DialNumber>string(Phone Number 1)</DialNumber>
+      </Communication>
+      <Communication>
+         <DialNumber>string(Phone Number 2)</DialNumber>
+      </Communication>
+      <Communication>
+         <DialNumber>string(Phone Number 3)</DialNumber>
+      </Communication>
+      <Communication>
+         <DialNumber>string(Phone Number 4)</DialNumber>
+      </Communication>
+   </Contact>
+   <BuyerContact>
+      <ID>normalizedString(Billing Customer Code)</ID>
+      <Name>string(Customer Invoice Name)</Name>
+	  <Address>
+         <AttentionOfName>string()</AttentionOfName>
+         <AddressLine>string(Customer Invoice Address Line 1)</AddressLine>
+         <AddressLine>string(Customer Invoice Address Line 2)</AddressLine>
+         <AddressLine>string(Customer Invoice Address Line 3)</AddressLine>
+         <CityName>string(Customer Invoice City)</CityName>
+         <CountrySubDivisionCode>normalizedString(Customer Invoice State)</CountrySubDivisionCode>
+         <CountryCode>normalizedString(Customer Invoice Country)</CountryCode>
+         <PostalCode>normalizedString(Customer Invoice Postal Code)</PostalCode>
+	  </Address>
+   </BuyerContact>
+   <UserArea>
+	  <cai:CustomerPartyMasterExtend>	
+	     <cai:TaxCode>(Tax Code)</cai:TaxCode>
+		 <cai:TaxableCode>(Taxable Flag)</cai:TaxableCode>
+		 <cai:NonTaxReason>(Non Taxable Reason Code)</cai:NonTaxReason>
+		 <cai:PORequiredFlag>(Purchase Order required flag)</cai:PORequiredFlag>
+		 <cai:JobNumberRequiredFlag>(Job Number Required flag)</cai:JobNumberRequiredFlag>
+		 <cai:AccountCategory>(Customer Accounting Category)</cai:AccountCategory>
+		 <cai:EditOrderTypeCode>(Edit Order Type Flag)</cai:EditOrderTypeCode>
+		 <cai:ThirdPartyFlag>(Third Party customer flag)</cai:ThirdPartyFlag>
+		 <cai:UseFrameProjectProductFlag>(Allow Frame Project product flag)</cai:UseFrameProjectProductFlag>
+		 <cai:FiscalRegistration>(Fiscal Registration Code)</cai:FiscalRegistration>
+		 <cai:RestrictProjectCreationFlag>(Restrict Project Creation flag)</cai:RestrictProjectCreationFlag>
+	  </cai:CustomerPartyMasterExtend>
+   </UserArea>
+</CustomerPartyMaster>

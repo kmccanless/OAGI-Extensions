@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by oh-vData-s01 (Command Alkon) -->
+<xs:schema xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cai="http://www.commandalkon.com/oagis/9" targetNamespace="http://www.commandalkon.com/oagis/9" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../../OAGi-BPI-Platform/org_openapplications_oagis/9_5/Developer/Nouns/CustomerPartyMaster.xsd"/>
+	<xs:include schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xs:complexType name="CustomerPartyMaster">
+		<xs:complexContent>
+			<xs:extension base="oa:CustomerPartyMasterType">
+				<xs:sequence>
+					<xs:element name="TaxCode"/>
+					<xs:element name="TaxableCode"/>
+					<xs:element name="NonTaxReason"/>
+					<xs:element name="PORequiredFlag"/>
+					<xs:element name="JobNumberRequiredFlag"/>
+					<xs:element name="AccountCategory"/>
+					<xs:element name="EditOrderTypeCode"/>
+					<xs:element name="ThirdPartyFlag"/>
+					<xs:element name="UseFrameProjectProductFlag"/>
+					<xs:element name="FiscalRegistration"/>
+					<xs:element name="RestrictProjectCreationFlag"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CustomerPartyMaster" type="cai:CustomerPartyMaster" substitutionGroup="oa:CustomerPartyMaster"/>
+	<xs:complexType name="Location">
+		<xs:complexContent>
+			<xs:extension base="oa:LocationType">
+				<xs:sequence>
+					<xs:element name="OrderType"/>											
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Location" type="cai:Location" substitutionGroup="oa:Location"/>
+</xs:schema>
